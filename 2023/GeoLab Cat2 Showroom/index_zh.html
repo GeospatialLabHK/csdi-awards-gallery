@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CSDI Awards 2023 - Category 2</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style_zh.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">空間數據共享平台大獎 2023</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2023" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLab Cat1 Showroom/index_zh.html">高小組</a>
+            <a href="../GeoLab Cat2 Showroom/index_zh.html" class="active"
+                >初中組</a
+            >
+            <a href="../GeoLab Cat3 Showroom/index_zh.html">高中組</a>
+            <a href="../GeoLab Cat4 Showroom/index_zh.html">公開組</a>
+        </div>
+        <div id="page-caption">初中組</div>
+        <div id="page-caption1">2</div>
+        <div id="page-description">
+            此工作站呈現了中一至中三學生所製作的StoryMaps，他們在初中組(Category
+            2)的獎項中獲得特別表彰。
+            <br />
+            <br />
+            今年的焦點主題為「環境、社會及管治」
+            (ESG)，當中包含與城市未來可持續發展有關的重要課題和挑戰，例如環境護理、社會的包容性、資源的可取得性等等。
+            <br />
+            <br />
+            參賽同學運用了空間數據共享平台入門網站當中的數據以及ESG的核心理念，提出了針對城市在可持續性、韌性以及多元性方面的改善建議，充分展現了空間數據於構建一個可持續的智慧城市上的巨大潛能。
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>香港公立醫院長時間等待的原因</h1>
+                <img alt="" src="pic/hospital.png" />
+                <figcaption>
+                    <h3>更多資訊</h3>
+                    <span> 拔萃女書院 </span>
+                    <p>
+                        診所的高價收費導致許多市民轉往公立醫院就醫。東區五十萬居民僅依賴一家公立醫院，因此長時間等待已成常態。此分析深入研究香港不平均的醫院分佈情況。
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/be5dfd1c57984496ab52b481d6490769"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>突破藍圖界限</h1>
+                <h2>由舊工業區轉型為現代住宅區</h2>
+                <img alt="" src="pic/blueprint.png" />
+                <figcaption>
+                    <h3>更多資訊</h3>
+                    <span> 港大同學會書院 </span>
+                    <p>
+                        隨著香港人口的增長，住房需求日益增強。廣大的工業用地，配備完善的基礎設施，具有極大的住宅開發潛力。然而，何種條件才能確定一塊工業土地適合進行此類轉型？
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/d776c85e6fe6406aaf3edd04f0b31766"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>綠色風之路</h1>
+                <img alt="" src="pic/wind.png" />
+                <figcaption>
+                    <h3>更多資訊</h3>
+                    <span> 九龍三育中學 </span>
+                    <p>
+                        面臨全球暖化的嚴峻挑戰，香港採用了創新策略。他們從交通中捕獲風能並優化電動車充電站，致力於締造更環保的未來。繼續閱讀，深入了解這些綠色創新之道！
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/0bbd0ace21c5456686a8816e60394f40"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- 點擊空白處以退出故事地圖 -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>

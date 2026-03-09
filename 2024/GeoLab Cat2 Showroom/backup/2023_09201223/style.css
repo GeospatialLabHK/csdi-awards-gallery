@@ -1,0 +1,531 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-smooth: auto;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'mollen'; /* you can name it whatever you like */
+  src: url('fonts/mollen-regularpersonaluse.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ariona'; /* you can name it whatever you like */
+  src: url('fonts/Ariona-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'george-sans'; /* you can name it whatever you like */
+  src: url('fonts/george-regular.otf') format('opentype');
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #008080;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 375px;
+  min-width: 375px;
+  height: 667px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+  filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+figure:hover {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 15px rgba(0,0,0,0.3);
+  filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%)
+}
+figure:hover h1 {
+  opacity: 0;
+  transform: scale(0.7);
+}
+figure:hover img {
+  transform: scale(1.25);
+}
+figure:hover figcaption {
+  bottom: 0;
+}
+figure h1 {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.25s ease;
+  z-index: 999;
+}
+figure img {
+  height: 100%;
+  transition: 0.25s;
+}
+figure figcaption {
+  position: absolute;
+  bottom: -31%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: white;
+  line-height: 1;
+  transition: 0.25s;
+}
+figure figcaption h3 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+figure figcaption p {
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: justify;
+}
+figure figcaption button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0;
+  padding: 10px 30px;
+  background-color: hsl(168, 76%, 42%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+figure figcaption span {
+  display: inline-block;
+  margin-left: 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s 0.25s, transform 0.35s 0.25s; /* Added a delay of 0.25s */
+}
+
+figure:hover figcaption span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards-container1 {
+  position: relative;
+  top: 7%;
+  left: 13%;
+}
+.cards-container1 h1{
+  font-size: 40px;
+  max-width: 85%;
+}
+
+.cards-container2 {
+  position: relative;
+  top: 7%;
+  left: 11%;
+}
+
+.cards-container3 {
+  position: relative;
+  top: 7%;
+  left: 9%;
+}
+
+.cards-container4 {
+  position: relative;
+  top: 7%;
+  left: 7%;
+}
+
+.cards-container {
+  display: flex;
+  gap: 0px;  /* Space between cards */
+  padding-left: 50px;  /* Blank space to the left */
+}
+
+
+figcaption span {
+    position: relative;
+    display: inline-block;
+    font-size: 19px;
+}
+
+figcaption span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 3px;
+    background: hsl(42, 94%, 49%);
+    transition: width 0.4s ease-in-out;  
+}
+
+figure.image-block:hover figcaption span {
+    animation: fadeIn 1.3s forwards;  /* Fade in animation for the span */
+}
+
+figure.image-block:hover figcaption span::after {
+    width: 150px;  /* Increased width for the green line */
+    animation: slideIn 0.4s forwards 0.3s;  /* Slide in animation with a delay matching the fadeIn duration */
+}
+
+/* Fade in animation for span text */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide in animation for the green underline */
+@keyframes slideIn {
+    from { width: 0; }
+    to { width: 350px; }
+}
+
+#iframe-container {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* Stack iframe and button vertically */
+}
+
+#iframe-container iframe {
+  width: 80%;
+  height: 80vh;  /* Changed to view height units to make the iframe occupy 80% of the screen height */
+  display: block;
+  border: none;
+  margin-bottom: 10px;  /* Space between iframe and back button */
+  border-radius: 10px
+}
+
+#iframe-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    position: relative;  /* Changed from absolute to relative */
+    top: unset;  /* Remove top positioning */
+    right: unset;  /* Remove right positioning */
+    padding: 10px 20px;
+    margin-top: 10px;  /* Space above the back button */
+    align-self: center;  /* Center the button horizontally within iframe-container */
+}
+
+#iframe-container button:hover {
+    background-color: #555;
+}
+
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+@keyframes breathing {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+p1 {
+      animation: flashing 1s infinite;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 30px;
+      text-align: center;
+      padding: 10px;
+}
+
+.cards-container {
+  position: relative;  /* Ensure the container has a relative position */
+  /* ... other styles ... */
+}
+
+/* Adjusted overlay styles for the cards container */
+.cards-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.09);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s;  /* Slow transition for the overlay */
+  z-index: 0;  /* Ensure it's above the content but below the iframe */
+}
+
+/* Adjusted blur and overlay styles when the class is added */
+.blur-background {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+/* The blur effect transition for .cards-container */
+.cards-container.blur-background {
+  transition: filter 0.8s;
+}
+
+#page-title {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 180px;
+    font-weight: bold;
+}
+
+#page-caption {
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  max-width: 10%;
+  line-height: 120%;
+  font-weight: bold;
+}
+
+#page-caption1 {
+  position: absolute;
+  top: 29%;
+  left: 18%;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 130px;
+  max-width: 23%;
+  font-weight: bold;
+}
+
+#page-description {
+    position: absolute;
+    top: 47%;
+    left: 5%;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    max-width: 16%;
+    line-height: 1.4;
+    color: #c4c3c3;
+}
+
+/* Styles for the modal (popup) window */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefecd;
+    margin: 17% auto;
+    padding: 35px;
+    padding-left: 3%;
+    padding-right: 3%;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.modal-content p {
+  font-size: 25px;
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes flashing {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+#info-modal p1 {
+    animation: flashing 1s infinite;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Standard */
+}
+
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  top: 30px;    /* distance from the bottom */
+  right: 5%;       /* center it horizontally */
+  transform: translateX(-50%); /* shift it leftwards by half of its width to truly center it */
+}
+
+.switch > span {
+  position: absolute;
+  top: 10px;
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #F36F25;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 2px;
+  color: #F36F25;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 4px;
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 4px;
+  width: 150px;
+  height: 50px;
+  background-color: #F36F25;
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  background-color: #F36F25;
+  -webkit-
+  
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+}
+input.check-toggle-round-flat + label:after {
+  top: 5px;
+  left: 6px;
+  bottom: 7px;
+  width: 68px;
+  background-color: #fff;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  -ms-border-radius: 52px;
+  -o-border-radius: 52px;
+  border-radius: 52px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label {
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 70px;
+}

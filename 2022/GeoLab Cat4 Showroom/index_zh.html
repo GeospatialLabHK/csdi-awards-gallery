@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CodePen - Figure + Figcaption
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style_zh.css" rel="stylesheet"/>
+        <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            地理訊息系統應用公開賽2022
+        </div>
+        <div id="page-title1">
+            🏆
+        </div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLab Cat1 Showroom/index_zh.html">高小組</a>
+            <a href="../GeoLab Cat2 Showroom/index_zh.html">初中組</a
+            >
+            <a href="../GeoLab Cat3 Showroom/index_zh.html"
+                >高中組</a>
+            <a href="../GeoLab Cat4 Showroom/index_zh.html" class="active">公開組</a>
+        </div>
+        <div id="page-caption">
+            公開組
+        </div>
+        <div id="page-caption1">
+        <div id="page-caption1">4</div>
+        </div>
+        <div id="page-description">
+            此工作站呈現了公眾及大專學生所製作的StoryMaps，他們在公開組(Category 4)的獎項中獲得特別表彰。
+            <br>
+            <br>
+            今年的焦點主題為「透過運用地理信息系統及空間數據進行鄰里探索，以促進本地旅遊業的發展」
+            <br>
+            <br>
+            參賽者需善用地理信息系統與空間數據，展示本地旅遊景點或交通流量的分布特徵，並透過地圖解讀與分析解釋其成因。他們可設計智慧出行程式、規劃生態遊路線，或結合普查數據建立人口特徵，並以故事地圖完整呈現成果。
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>
+                露營不留痕
+                </h1>
+                <img alt="" src="..\GeoLab Cat4 Showroom\pic\camping.jpeg"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    <br/>
+                    <br/>
+                    <br/>
+                    </h3>
+                    <p>
+                        本故事地圖以「露營而不破壞」為核心，分析塔門非法露營造成的生態破壞，並透過GIS適地性評估提出新營地規劃，推廣綠色旅遊與可持續露營文化。
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/5f7f8b87a99a421c96319369f6a5c6bb">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>
+                    輪跡之旅
+                </h1>
+                <img alt="" src="..\GeoLab Cat4 Showroom\pic\wheel.png"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    <br/>
+                    <br/>
+                    <br/>
+                    </h3>
+                    <p>
+                       在香港，殘疾人士的需求長期被忽視。除了交通不便，街道設計亦不理想，令輪椅使用者難以滿足日常需要。社會普遍存在偏見，認為輪椅人士只應在必要時外出以免造成不便。在真正的無障礙社區中，他們應有平等的出行機會。
+                    <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/3fac4e795f0e4a6791b6b4179911d48b">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                 社群更新計劃
+                </h1>
+                <img alt="" src="..\GeoLab Cat4 Showroom\pic\ss.jpeg"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    <br/>
+                    <br/>
+                    <br/>
+                    </h3>
+                    <p>
+                        此故事地圖探討深水埗都市更新，指出舊區樓宇老化、環境衛生差、交通與行人網絡不足等問題。計劃利用BIM與CIM技術，提出重建方案，保留地道餐館與文化特色，同時改善居住環境與旅遊吸引
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/cf170d0814644bb1beb3b86a19992e15">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- 點擊空白處以退出故事地圖 --
+            </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+                <div class="slider"></div>
+                <span data-lang="en" class="option">EN</span>
+                <span data-lang="zh" class="option">繁中</span>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+                // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+                const langToggle = document.getElementById("langToggle");
+                const slider = langToggle.querySelector(".slider");
+
+                const isChinesePage = window.location.href.includes("index_zh.html");
+
+                function initToggle() {
+                    const enOption = langToggle.querySelector('[data-lang="en"]');
+                    const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                    // 1. Instantly set starting position (opposite side) — no animation yet
+                    slider.style.transition = "none";
+
+                    if (isChinesePage) {
+                        langToggle.classList.add("chinese");
+                        zhOption.classList.add("active");
+                        enOption.classList.remove("active");
+                    } else {
+                        langToggle.classList.remove("chinese");
+                        enOption.classList.add("active");
+                        zhOption.classList.remove("active");
+                    }
+
+                    // 2. Tiny delay → re-enable animation so it slides in
+                    setTimeout(() => {
+                        slider.style.transition = "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                    }, 30);
+                }
+
+                // Click = switch page
+                langToggle.addEventListener("click", () => {
+                    window.location.href = isChinesePage ? "index.html" : "index_zh.html";
+                });
+
+                initToggle();
+            </script>
+</html>

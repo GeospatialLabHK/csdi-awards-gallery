@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Open GIS competition - Category 1</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style_zh.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">地理訊息系統應用公開賽2022</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLab Cat1 Showroom/index_zh.html" class="active"
+                >高小組</a
+            >
+            <a href="../GeoLab Cat2 Showroom/index_zh.html">初中組</a>
+            <a href="../GeoLab Cat3 Showroom/index_zh.html">高中組</a>
+            <a href="../GeoLab Cat4 Showroom/index_zh.html">公開組</a>
+        </div>
+        <div id="page-caption">高小組</div>
+        <div id="page-caption1">1</div>
+        <div id="page-description">
+            此工作站呈現了小四至小六學生所製作的StoryMaps，他們在高小組(Category
+            1)的獎項中獲得特別表彰。
+            <br />
+            <br />
+            今年的焦點主題為「透過設計休閒步行路線進行鄰里探索」
+            <br />
+            <br />
+            參賽同學利用互動地圖，透過圖片、短片及地理資訊標記步行路線
+            ，讓地圖不僅是一個導航工具，更成為一個生動的導覽平台。公眾
+            可以在地圖上直觀地看到景點的特色
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>遊走深水埗</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\shum.jpg" />
+                <figcaption>
+                    <h3>
+                        更多資訊
+                        <br />
+                        <br />
+                    </h3>
+                    <span> 民生書院小學 </span>
+                    <p>
+                        深水埗是一個內城區，人口密集，建築物和設施殘破，給人古舊衰落的印象。然而殘舊的背後，於此社區我們不難發現歷史建築和本土文化，就讓我們一起探索吧！
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/302fd264852240cd97a3d765e3db50fe"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>錦田一日遊</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\kamtin_new.jpg" />
+                <figcaption>
+                    <h3>
+                        更多資訊
+                        <br />
+                        <br />
+                    </h3>
+                    <span> 博愛醫院歷屆總理聯誼會梁省德學校 </span>
+                    <p>
+                        父母喜歡帶我們到不同地方郊遊，其中錦田是我們最喜歡的一個世外桃源!
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/b43eca591fa34d549e85ba847c581f7e"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>天水圍及鄰近地區一天遊</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\tsw_new.jpg" />
+                <figcaption>
+                    <h3>
+                        更多資訊
+                        <br />
+                        <br />
+                    </h3>
+                    <span> 博愛醫院歷屆總理聯誼會梁省德學校 </span>
+                    <p>
+                        天水圍是我居住的地方，我將會利用這個地圖告訴大家天水圍的故事。你們在這裡看到的地方皆是我從小到大在閒暇時會去的地方!
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/e6f77502d7ad48bb96bd62634811bc94"
+                    >
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- 點擊空白處以退出故事地圖 -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>

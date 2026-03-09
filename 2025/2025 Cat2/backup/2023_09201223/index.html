@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CSDI Awards 2023 - Category 2
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            CSDI Awards 2023 🏆
+        </div>
+        <div id="page-caption">
+            Secondary Category
+        </div>
+        <div id="page-caption1">
+            2
+        </div>
+        <div id="page-description">
+            Our showroom features StoryMaps from S1 to S3 students who have been recognized in the Category 2 awards.
+            <br>
+            <br>
+            This year's theme is "Environmental, Social, and Governance" (ESG), which addresses crucial issues for our city's sustainable future.
+            <br/>
+            <br/>
+            Students applied ESG principles to suggest improvements for our city in areas of sustainability, resilience, and diversity. The ESG themes touch upon environmental care, social inclusivity, and resource access, demonstrating the potential of spatial data in problem-solving.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>
+                    Reasons behind long waiting hours of public hospitals in Hong Kong
+                </h1>
+                <img alt="" src="pic/hospital.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        Diocesan Girls' School
+                    </span>
+                    <p> 
+                        High clinic fees push many to public hospitals. With just one public hospital for over half a million residents in Eastern District, long waits are inevitable. This analysis explores Hong Kong's uneven hospital distribution.
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/be5dfd1c57984496ab52b481d6490769">
+                        Read More
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>
+                    Beyond the Blueprint
+                </h1>
+                <img alt="" src="pic/blueprint.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        HKU Graduate Association College
+                    </span>
+                    <p>
+                        As Hong Kong's population grows, the quest for housing intensifies. Industrial sites, with vast spaces and infrastructure, are prime for residential conversion. But what criteria make an industrial land suitable for such a transformation?
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/d776c85e6fe6406aaf3edd04f0b31766">
+                        Read More
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                    Windswept Ways to Green Energy
+                </h1>
+                <img alt="" src="pic/wind.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        Kowloon Sam Yuk Secondary School
+                    </span>
+                    <p>
+                        Facing the heat of global warming, Hong Kong turns to innovative solutions. By tapping into wind energy from traffic and optimizing EV charging stations, the city seeks greener avenues. Read more to explore innovative solutions for a greener future!
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/0bbd0ace21c5456686a8816e60394f40">
+                        Read More
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container4">
+            <figure class="image-block">
+                <h1>
+                    Addition to Recreation
+                </h1>
+                <img alt="" src="pic/recreation.png"/>
+                <figcaption>
+                    <h3>
+                        More Info
+                    </h3>
+                    <span>
+                        Maryknoll Convent School (Secondary Section)
+                    </span>
+                    <p>
+                        Amidst the COVID-19 pandemic, Hong Kong's need for recreational spaces has become evident. This study highlights their value for the elderly and children and offers suggestions for enhancing the city's well-being.
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/0c161e0056294e7a984279ef0e4277c1">
+                        Read More
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- Click empty space to exit StoryMap --
+            </p1>
+        </div>
+        <div class="switch">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">EN</span>
+            <span class="off">繁中</span>
+          </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

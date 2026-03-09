@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Open GIS competition - Category 1</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">Open GIS competition 2022</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLab Cat1 Showroom/index.html" class="active"
+                >Upper Primary</a
+            >
+            <a href="../GeoLab Cat2 Showroom/index.html">Junior Secondary</a>
+            <a href="../GeoLab Cat3 Showroom/index.html">Senior Secondary</a>
+            <a href="../GeoLab Cat4 Showroom/index.html">Open</a>
+        </div>
+        <div id="page-caption">Primary Category</div>
+        <div id="page-caption1">1</div>
+        <div id="page-description">
+            Our showroom features StoryMaps from P4 to P6 students who have been
+            recognized in the Category 1 awards.
+            <br />
+            <br />
+            This year's theme is "Neighborhood exploration through designing a
+            leisure walking route"
+            <br />
+            <br />
+            A student uses an interactive map application to record their
+            journey by geotagging images, videos, and geographic information at
+            each stop. The maps highlights attractions and points of interest in
+            the community, serving as a dynamic guide that educates, engages,
+            and introduces local culture and landmarks to the public.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>Wandering in Sham Shui Po</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\shum.jpg" />
+                <figcaption>
+                    <h3>
+                        More Info
+                        <br />
+                        <br />
+                    </h3>
+                    <span> Munsang College Primary School </span>
+                    <p>
+                        Sham Shui Po may look crowded and worn, yet hidden among
+                        its aging streets are stories of heritage and local
+                        culture waiting to be uncovered—come wander and discover
+                        its charm!
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/302fd264852240cd97a3d765e3db50fe"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>A Day Trip to Kam Tin</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\kamtin_new.jpg" />
+                <figcaption>
+                    <h3>
+                        More Info
+                        <br />
+                        <br />
+                    </h3>
+                    <span> AD & FD OF Pohl Leung Sing Tak School </span>
+                    <p>
+                        Our parents love taking us outdoors, and Kam Tin has
+                        become our favorite hidden paradise—a perfect escape
+                        from the city where winding village paths, historic
+                        walled houses, and lush countryside invite us to slow
+                        down, explore, and enjoy the beauty of nature together.
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/b43eca591fa34d549e85ba847c581f7e"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>A One-Day Tour of Tin Shui Wai and Nearby Areas</h1>
+                <img alt="" src="..\GeoLab Cat1 Showroom\pic\tsw_new.jpg" />
+                <figcaption>
+                    <h3>
+                        More Info
+                        <br />
+                        <br />
+                    </h3>
+                    <span> AD & FD OF Pohl Leung Sing Tak School </span>
+                    <p>
+                        Tin Shui Wai is where I live, and I'm using this map to
+                        share its story with you. Every spot you see here is a
+                        place I've visited since childhood during my free time.
+                        I hope you'll enjoy exploring these memories and
+                        discovering the charm of Tin Shui Wai!
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/e6f77502d7ad48bb96bd62634811bc94"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- Click empty space to exit StoryMap -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CodePen - Figure + Figcaption</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">Open GIS competition 2022</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLab Cat1 Showroom/index.html">Upper Primary</a>
+            <a href="../GeoLab Cat2 Showroom/index.html">Junior Secondary</a>
+            <a href="../GeoLab Cat3 Showroom/index.html" class="active"
+                >Senior Secondary</a
+            >
+            <a href="../GeoLab Cat4 Showroom/index.html">Open</a>
+        </div>
+        <div id="page-caption">Secondary Category</div>
+        <div id="page-caption1">3</div>
+        <div id="page-description">
+            Our showroom features StoryMaps from S4 to S6 students who have been
+            recognized in the Category 3 awards.
+            <br />
+            <br />
+            The theme is "Theme: Enhancement on public cleanliness, healthy
+            living, green lifestyle, or raise community awareness on
+            environmental protection by applying spatial data and GIS"
+            <br />
+            <br />
+            Students used spatial data from the CSDI portal to deliver a web
+            base and map-centric story map, They also used basic spatial
+            analysis skills and thematic mapping technique to show spatial
+            pattern to present spatial patterns to support their observations
+            and conclusions.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>Protecting Somanniathelphusa Zanklon</h1>
+                <img alt="" src="pic/Crab.jpeg" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span> Carmel Pak U Secondary School </span>
+                    <p>
+                        Emphasizing the ecological importance of Hong Kong's
+                        native endangered crab species—the Kamchatka crab
+                        (Somanniathelphusa zanklon). The content discusses urban
+                        development and potential solutions for modifying river
+                        channels to protect local biodiversity.
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://arcg.is/GuWzb1"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>Exploring the livability of TKO</h1>
+                <img alt="" src="pic/TKO.jpeg" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span>
+                        Christian and Missionary Alliance Sun Kei Secondary
+                        School
+                    </span>
+                    <p>
+                        Explores the quality of living in Tseung Kwan O. The
+                        process involved data collection, interpolation,
+                        reclassification, and weighted map overlay to assess and
+                        compare the habitability of various zones, aiming to
+                        help improve residents' living standards.
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://arcg.is/1XWG480"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>Brownfield Use Planning</h1>
+                <img alt="" src="pic/BrownField.jpeg" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span> NLSI Lui Kwok Pat Fong College </span>
+                    <p>
+                        Explores the issue of brownfields in Hong Kong, focusing
+                        on their distribution, challenges, and environmental
+                        impact. The map highlights the need for better land use
+                        planning to reduce environmental risks and improve
+                        residents’ quality of life.
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/20f1bd6fa5a349e9863adb25b2872e68"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- Click empty space to exit StoryMap -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>
