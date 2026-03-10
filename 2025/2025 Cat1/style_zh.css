@@ -68,6 +68,43 @@ body {
     }
 }
 
+.video-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.video-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.video-button i {
+    font-size: 16px;
+}
+
+#video-container {
+    justify-content: center;
+    align-items: center;
+}
+
+#video-player {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
 figure {
     position: relative;
     display: flex;
@@ -144,21 +181,31 @@ figure figcaption p {
     line-height: 1.65;
     text-align: justify;
 }
+figure figcaption .button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 figure figcaption button {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: 10px 0 0;
-    padding: 10px 30px;
-    background-color: hsl(168, 76%, 42%);
+    padding: 10px 20px;
+    background-color: #50c878;
     border: none;
     border-radius: 5px;
     color: white;
     font-size: 20px;
-    cursor:
-        url("pic/cursor-link.png") 16 16,
-        auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(80, 200, 120, 0.4);
+}
+
+figure figcaption button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(80, 200, 120, 0.6);
 }
 
 figure figcaption span {

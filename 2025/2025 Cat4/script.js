@@ -7,6 +7,71 @@ document.querySelectorAll(".read-more-button").forEach(button => {
     });
 });
 
+// Listen to video button clicks
+document.querySelectorAll(".video-button").forEach(button => {
+    button.addEventListener("click", function(event) {
+        event.preventDefault();
+        const videoSrc = this.getAttribute("data-video");
+        showVideo(videoSrc);
+    });
+});
+
+function showVideo(src) {
+    var videoContainer = document.getElementById('video-container');
+    var videoPlayer = document.getElementById('video-player');
+    videoPlayer.src = src;
+    
+    // Show the dark overlay
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+    gsap.to(overlay, { opacity: 1, duration: 0.3 });
+    
+    videoContainer.style.display = 'flex';
+    
+    // GSAP animation to smoothly expand the video
+    gsap.fromTo(videoPlayer, 
+        { opacity: 0, scale: 0.1 }, 
+        { opacity: 1, scale: 1, duration: 0.5, ease: "power2.out" }
+    );
+    
+    videoPlayer.play();
+}
+
+function hideVideo() {
+    var videoPlayer = document.getElementById('video-player');
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+    
+    // Hide the dark overlay
+    var overlay = document.getElementById('overlay');
+    gsap.to(overlay, {
+        opacity: 0, duration: 0.3, onComplete: function() {
+            overlay.style.display = 'none';
+        }
+    });
+    
+    // GSAP animation to smoothly hide the video
+    gsap.to(videoPlayer, {
+        opacity: 0, scale: 0.7, duration: 0.5, ease: "power2.in",
+        onComplete: function() {
+            document.getElementById('video-container').style.display = 'none';
+            videoPlayer.src = '';
+        }
+    });
+}
+
+// Add event listener to close video when clicking outside
+document.getElementById('video-container').addEventListener('click', function(event) {
+    if (event.target === event.currentTarget) {
+        hideVideo();
+    }
+});
+
+// Add event listener to close video when clicking the message
+document.querySelector('#video-container p1').addEventListener('click', function() {
+    hideVideo();
+});
+
 function showIframe(url) {
     var iframeContainer = document.getElementById('iframe-container');
     var iframe = iframeContainer.querySelector('iframe');
