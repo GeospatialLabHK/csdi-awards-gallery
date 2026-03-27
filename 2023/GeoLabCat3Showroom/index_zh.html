@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CodePen - Figure + Figcaption
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style_zh.css" rel="stylesheet"/>
+        <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            空間數據共享平台大獎 2023
+        </div>
+        <div id="page-title1">
+            🏆
+        </div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2023" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLabCat1Showroom/index_zh.html">高小組</a>
+            <a href="../GeoLabCat2Showroom/index_zh.html">初中組</a
+            >
+            <a href="../GeoLabCat3Showroom/index_zh.html" class="active"
+                >高中組</a>
+            <a href="../GeoLabCat4Showroom/index_zh.html">公開組</a>
+        </div>
+        <div id="page-caption">
+            高中組
+        </div>
+        <div id="page-caption1">
+            3
+        </div>
+        <div id="page-description">
+            此工作站呈現了中四至中六學生所製作的StoryMaps，他們在高中組(Category 3)的獎項中獲得特別表彰。
+            <br>
+            <br>
+            今年的焦點主題為「環境、社會及管治」 (ESG)，當中包含與城市未來可持續發展有關的重要課題和挑戰，例如環境護理、社會的包容性、資源的可取得性等等。
+            <br>
+            <br>
+            參賽同學運用了空間數據共享平台入門網站當中的數據以及ESG的核心理念，提出了針對城市在可持續性、韌性以及多元性方面的改善建議，充分展現了空間數據於構建一個可持續的智慧城市上的巨大潛能。
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>
+                    新市鎮檔案
+                </h1>
+                <img alt="" src="pic/new_town_v2.png"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    </h3>
+                    <span>
+                        聖保羅男女中學
+                    </span>
+                    <p>
+                        香港50年城市發展大計是否達到預期的目標？透過深度的空間分析，我們將揭露這座城市的都市現實，從環保問題到通勤的挑戰。這篇研究為你呈現了香港都市規劃的全新面貌。
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/9fc1e656a94d4f9ea0e90d9a9e8b9a46">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>
+                    香港的<br>紅潮現象
+                </h1>
+                <img alt="" src="pic/red_tides_v2.png"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    </h3>
+                    <span>
+                        聖公會鄧肇堅中學
+                    </span>
+                    <p>
+                        探討香港水域出現的紅潮現象，這是由於藻類迅速繁殖所引致。深入探索它對海洋生態和本地居民造成的影響。
+                        <br/>
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/6b5fb8d8e24c4cb9b9e71ff359c833e7">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                    我們該往
+                    <br/>
+                    哪裡逃？
+                </h1>
+                <img alt="" src="pic/war_v2.png"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    </h3>
+                    <span>
+                        嘉諾撒聖瑪利書院
+                    </span>
+                    <p>
+                        隨著全球緊張局勢的加劇，這張故事地圖探討了香港在衝突時期的生存潛力。我們的目標是透過揭示城市隱藏的地理空間解決方案，包括逃生路線和遷移目的地，在發生戰爭時最大限度地減少傷害和生命損失。
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://storymaps.arcgis.com/stories/20f1bd6fa5a349e9863adb25b2872e68">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- 點擊空白處以退出故事地圖 --
+            </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+                <div class="slider"></div>
+                <span data-lang="en" class="option">EN</span>
+                <span data-lang="zh" class="option">繁中</span>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+                // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+                const langToggle = document.getElementById("langToggle");
+                const slider = langToggle.querySelector(".slider");
+
+                const isChinesePage = window.location.href.includes("index_zh.html");
+
+                function initToggle() {
+                    const enOption = langToggle.querySelector('[data-lang="en"]');
+                    const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                    // 1. Instantly set starting position (opposite side) — no animation yet
+                    slider.style.transition = "none";
+
+                    if (isChinesePage) {
+                        langToggle.classList.add("chinese");
+                        zhOption.classList.add("active");
+                        enOption.classList.remove("active");
+                    } else {
+                        langToggle.classList.remove("chinese");
+                        enOption.classList.add("active");
+                        zhOption.classList.remove("active");
+                    }
+
+                    // 2. Tiny delay → re-enable animation so it slides in
+                    setTimeout(() => {
+                        slider.style.transition = "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                    }, 30);
+                }
+
+                // Click = switch page
+                langToggle.addEventListener("click", () => {
+                    window.location.href = isChinesePage ? "index.html" : "index_zh.html";
+                });
+
+                initToggle();
+            </script>
+</html>

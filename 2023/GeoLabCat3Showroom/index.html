@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CodePen - Figure + Figcaption</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">CSDI Awards 2023</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index.html#showcase2023" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLabCat1Showroom/index.html">Upper Primary</a>
+            <a href="../GeoLabCat2Showroom/index.html">Junior Secondary</a>
+            <a href="../GeoLabCat3Showroom/index.html" class="active"
+                >Senior Secondary</a
+            >
+            <a href="../GeoLabCat4Showroom/index.html">Open</a>
+        </div>
+        <div id="page-caption">Secondary Category</div>
+        <div id="page-caption1">3</div>
+        <div id="page-description">
+            Our showroom features StoryMaps from S4 to S6 students who have been
+            recognized in the Category 3 awards.
+            <br />
+            <br />
+            This year's theme is "Environmental, Social, and Governance" (ESG),
+            which addresses crucial issues for our city's sustainable future.
+            <br />
+            <br />
+            Students applied ESG principles to suggest improvements for our city
+            in areas of sustainability, resilience, and diversity. The ESG
+            themes touch upon environmental care, social inclusivity, and
+            resource access, demonstrating the potential of spatial data in
+            problem-solving.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>New Town Report</h1>
+                <img alt="" src="pic/new_town_v2.png" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span> St. Paul's Co-educational College </span>
+                    <p>
+                        Is Hong Kong's ambitious 50-year town project delivering
+                        on its vision? Dive into a spatial analysis that unveils
+                        the city's urban truths, from environmental concerns to
+                        commuting challenges. This study offers a fresh look at
+                        Hong Kong's urban planning.
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/2aa9045d5c1c4e70b330499c7c98da16"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>Red Tides in Hong Kong</h1>
+                <img alt="" src="pic/red_tides_v2.png" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span> SKH Tang Shiu Kin Secondary School </span>
+                    <p>
+                        Explore the phenomenon of red tides in Hong Kong's
+                        waters, caused by rapid algal blooms. Discover their
+                        effects on marine life and local residents in this
+                        in-depth study on their spatial impact.
+                        <br />
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/6b5fb8d8e24c4cb9b9e71ff359c833e7"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                    Where
+                    <br />
+                    should we go?
+                </h1>
+                <img alt="" src="pic/war_v2.png" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <span> St. Mary’s Canossian College </span>
+                    <p>
+                        As global tensions rise, this StoryMap explores Hong
+                        Kong's potential to survive in a time of conflict. We
+                        aim to minimize harm and reduce the loss of life in the
+                        event of war by revealing the city's hidden geospatial
+                        solutions, including escape routes and relocation
+                        destinations.
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/20f1bd6fa5a349e9863adb25b2872e68"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- Click empty space to exit StoryMap -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>

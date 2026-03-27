@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CodePen - Figure + Figcaption
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style_zh.css" rel="stylesheet"/>
+        <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            空間數據共享平台大獎 2023
+        </div>
+        <div id="page-title1">
+            🏆
+        </div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2023" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLabCat1Showroom/index_zh.html">高小組</a>
+            <a href="../GeoLabCat2Showroom/index_zh.html">初中組</a
+            >
+            <a href="../GeoLabCat3Showroom/index_zh.html">高中組</a>
+            <a href="../GeoLabCat4Showroom/index_zh.html" class="active"
+                >公開組</a>
+        </div>
+        <div id="page-caption">
+            公開組
+        </div>
+        <div id="page-caption1">
+            4
+        </div>
+        <div id="page-description">
+            此工作站呈現公眾及大專學生所製作的地理空間方案，他們在公開組(Category 4)的獎項中獲得特別表彰。
+            <br>
+            <br>
+            今年的焦點主題為「環境、社會及管治」 (ESG)，當中包含與城市未來可持續發展有關的重要課題和挑戰，例如環境護理、社會的包容性、資源的可取得性等等。
+            <br>
+            <br>
+            參賽者運用了空間數據共享平台入門網站當中的數據以及ESG的核心理念，提出了針對城市在可持續性、韌性以及多元性方面的改善建議，充分展現了空間數據於構建一個可持續的智慧城市上的巨大潛能。
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+
+                <img alt="" src="pic/busking.png"/>
+                <figcaption>
+                    <h3>
+                        To Band or to Ban
+                    </h3>
+                    <span>
+                        第 10 組
+                    </span>
+                    <p>
+                        想展示歌唱才華，但又不想造成滋擾？香港擁有許多歌唱人才，但受限環境難以自由街頭表演。
+                        這GIS工具輕鬆找出允許表演、受規管且人流充足的完美地點！還可透過網上預約系統預留位置，自由歌唱，為城市增添活力！
+                    </p>
+                    <button class="read-more-button" data-link="projs/group10.pdf">
+                        查看方案
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+
+                <img alt="" src="pic/urbaneye.png"/>
+                <figcaption>
+                    <h3>
+                        UrbanEYE
+                    </h3>
+                    <span>
+                        第 11 組
+                    </span>
+                    <p>
+                        隨著城市發展，許多舊區將進行重建。你心目中的理想社區是怎樣的呢？
+                        Urban Eye 利用人工智能和大數據建立評分卡，深入分析社區結構，推動更以人為本的重建！
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="projs/group11.pdf">
+                        查看方案
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <img alt="" src="pic/brick.png"/>
+                <figcaption>
+                    <h3>
+                        BrickThroughHK
+                    </h3>
+                    <span>
+                        第 9 組
+                    </span>
+                    <p>
+                        城市發展常令人感到抽象——很難想像新建築對社區的影響？
+                        BrickThroughHK 利用3D技術和地理數據分析，將規劃影響可視化，令結果更具體，並促進持份者對話！
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="projs/group9.pdf">
+                        查看方案
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- 點擊空白處以退出故事地圖 --
+            </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+                <div class="slider"></div>
+                <span data-lang="en" class="option">EN</span>
+                <span data-lang="zh" class="option">繁中</span>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+                // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+                const langToggle = document.getElementById("langToggle");
+                const slider = langToggle.querySelector(".slider");
+
+                const isChinesePage = window.location.href.includes("index_zh.html");
+
+                function initToggle() {
+                    const enOption = langToggle.querySelector('[data-lang="en"]');
+                    const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                    // 1. Instantly set starting position (opposite side) — no animation yet
+                    slider.style.transition = "none";
+
+                    if (isChinesePage) {
+                        langToggle.classList.add("chinese");
+                        zhOption.classList.add("active");
+                        enOption.classList.remove("active");
+                    } else {
+                        langToggle.classList.remove("chinese");
+                        enOption.classList.add("active");
+                        zhOption.classList.remove("active");
+                    }
+
+                    // 2. Tiny delay → re-enable animation so it slides in
+                    setTimeout(() => {
+                        slider.style.transition = "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                    }, 30);
+                }
+
+                // Click = switch page
+                langToggle.addEventListener("click", () => {
+                    window.location.href = isChinesePage ? "index.html" : "index_zh.html";
+                });
+
+                initToggle();
+            </script>
+</html>

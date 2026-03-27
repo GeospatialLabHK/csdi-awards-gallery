@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CodePen - Figure + Figcaption</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+        <link href="./style.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">Open GIS competition 2022</div>
+        <div id="page-title1">🏆</div>
+        <div class="nav">
+            <a href="../../index.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLabCat1Showroom/index.html">Upper Primary</a>
+            <a href="../GeoLabCat2Showroom/index.html">Junior Secondary</a>
+            <a href="../GeoLabCat3Showroom/index.html">Senior Secondary</a>
+            <a href="../GeoLabCat4Showroom/index.html" class="active">Open</a>
+        </div>
+        <div id="page-caption">Open Category</div>
+        <div id="page-caption1">4</div>
+        <div id="page-description">
+            Our showroom features StoryMaps from from the public and tertiary
+            students who have been recognized in the Category 4 awards.
+            <br />
+            <br />
+            This year's theme is "Neighbourhood exploration to enhance local
+            tourism by applying GIS and spatial data"
+            <br />
+            <br />
+            Participants should leverage GIS and spatial data to highlight the
+            distribution of local attractions or traffic flows, analyze their
+            causes through maps, and present findings with story maps. They may
+            design smart travel apps, plan eco-tourism routes, or use census
+            data to build population profiles.
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>Camping, but not Tampering</h1>
+                <img alt="" src="..\GeoLabCat4Showroom\pic\camping.jpeg" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <br />
+                    <p>
+                        This story map centers on the theme of 'Camp Without
+                        Harm,' analyzing the ecological damage caused by illegal
+                        camping in Tap Mun. Using GIS suitability assessments,
+                        it proposes new campsite planning to promote green
+                        tourism and a sustainable camping culture.
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/5f7f8b87a99a421c96319369f6a5c6bb"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>Wheeling Tour</h1>
+                <img alt="" src="..\GeoLabCat4Showroom\pic\wheel.png" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <br />
+                    <p>
+                        In Hong Kong, the needs of people with disabilities are
+                        often overlooked. Poor transport and street design make
+                        daily life difficult for wheelchair users, while social
+                        prejudice suggests they should only go out when
+                        necessary. A truly barrier-free community should ensure
+                        equal mobility opportunities
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/3fac4e795f0e4a6791b6b4179911d48b"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>Renewal of Local Communal</h1>
+                <img alt="" src="..\GeoLabCat4Showroom\pic\ss.jpeg" />
+                <figcaption>
+                    <h3>More Info</h3>
+                    <br />
+                    <p>
+                        This story map examines Sham Shui Po’s urban renewal,
+                        noting aging buildings, poor sanitation, and weak
+                        transport networks. Using BIM and CIM, it proposes
+                        redevelopment that preserves local culture while
+                        improving living conditions and tourism appeal
+                        <br />
+                        <br />
+                    </p>
+                    <button
+                        class="read-more-button"
+                        data-link="https://storymaps.arcgis.com/stories/cf170d0814644bb1beb3b86a19992e15"
+                    >
+                        View StoryMap
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div
+            id="overlay"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4);
+                z-index: 999;
+            "
+        ></div>
+        <div
+            id="iframe-container"
+            style="
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 9999;
+            "
+        >
+            <iframe src="externalContent"></iframe>
+            <p1> -- Click empty space to exit StoryMap -- </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+            <div class="slider"></div>
+            <span data-lang="en" class="option">EN</span>
+            <span data-lang="zh" class="option">繁中</span>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="script.js"></script>
+        <script>
+            // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+            const langToggle = document.getElementById("langToggle");
+            const slider = langToggle.querySelector(".slider");
+
+            const isChinesePage =
+                window.location.href.includes("index_zh.html");
+
+            function initToggle() {
+                const enOption = langToggle.querySelector('[data-lang="en"]');
+                const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                // 1. Instantly set starting position (opposite side) — no animation yet
+                slider.style.transition = "none";
+
+                if (isChinesePage) {
+                    langToggle.classList.add("chinese");
+                    zhOption.classList.add("active");
+                    enOption.classList.remove("active");
+                } else {
+                    langToggle.classList.remove("chinese");
+                    enOption.classList.add("active");
+                    zhOption.classList.remove("active");
+                }
+
+                // 2. Tiny delay → re-enable animation so it slides in
+                setTimeout(() => {
+                    slider.style.transition =
+                        "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                }, 30);
+            }
+
+            // Click = switch page
+            langToggle.addEventListener("click", () => {
+                window.location.href = isChinesePage
+                    ? "index.html"
+                    : "index_zh.html";
+            });
+
+            initToggle();
+        </script>
+    </body>
+</html>

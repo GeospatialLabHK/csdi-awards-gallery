@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            CodePen - Figure + Figcaption
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="./style_zh.css" rel="stylesheet"/>
+        <link
+                    rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="page-title">
+            地理訊息系統應用公開賽2022
+        </div>
+        <div id="page-title1">
+            🏆
+        </div>
+        <div class="nav">
+            <a href="../../index_zh.html#showcase2022" class="home-btn"
+                ><i class="fa-solid fa-house"></i
+            ></a>
+            <a href="../GeoLabCat1Showroom/index_zh.html">高小組</a>
+            <a href="../GeoLabCat2Showroom/index_zh.html">初中組</a
+            >
+            <a href="../GeoLabCat3Showroom/index_zh.html" class="active"
+                >高中組</a>
+            <a href="../GeoLabCat4Showroom/index_zh.html">公開組</a>
+        </div>
+        <div id="page-caption">
+            高中組
+        </div>
+        <div id="page-caption1">
+            3
+        </div>
+        <div id="page-description">
+            此工作站呈現了中四至中六學生所製作的StoryMaps，他們在高中組(Category 3)的獎項中獲得特別表彰。
+            <br>
+            <br>
+            今年的主題為運用空間數據及地理信息系統以提高社區公眾地方整潔、宣揚健康生活、綠色生活及加強社區環境保護的意識
+            <br>
+            <br>
+            參賽同學運用了空間數據共享平台入門網站當中的數據，圍繞主題建立網絡基礎和以地圖為中心的故事地圖，及運用基本的空間分析技巧和專題製圖技巧呈現空間模式來支持他們的觀察及結論。
+        </div>
+        <div class="cards-container1">
+            <figure class="image-block">
+                <h1>
+                    無「蟹」可擊
+                </h1>
+                <img alt="" src="pic/Crab.jpeg"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    </h3>
+                    <span>
+                        迦密柏雨中學
+                    </span>
+                    <p>
+                        強調香港本土瀕臨絕種的蟹類物種——鐮刀束腰蟹（Somanniathelphusa zanklon）的生態重要性。內容討論城市發展，修改河道以保護當地生物多樣性的可能方案。
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://arcg.is/GuWzb1">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container2">
+            <figure class="image-block">
+                <h1>
+                    探索將軍澳<br>的宜居性
+
+                </h1>
+                <img alt="" src="pic/TKO.jpeg"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+                    </h3>
+                    <span>
+                        基督教宣道會宣基中學
+                    </span>
+                    <p>
+                        探討將軍澳的居住品質，透過公開調查和空間分析，收集並分析居民對不同住宅區的看法，以找出最適宜居住的區域。
+                        <br/>
+                        <br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://arcg.is/1XWG480">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards-container3">
+            <figure class="image-block">
+                <h1>
+                    棕地用途規劃
+                </h1>
+                <img alt="" src="pic/BrownField.jpeg"/>
+                <figcaption>
+                    <h3>
+                        更多資訊
+
+                    </h3>
+                    <span>
+                        新生命教育協會呂郭碧鳳中學
+                    </span>
+                    <p>
+                        這個故事地圖探討香港的棕地問題，內容涵蓋棕地的分佈、存在的問題以及對環境的影響。強調需要妥善規劃棕地用途，以減少污染、提升生活素質。
+<br/>
+                        <br/>
+                    </p>
+                    <button class="read-more-button" data-link="https://arcg.is/10fWja">
+                        查看故事地圖
+                    </button>
+                </figcaption>
+            </figure>
+        </div>
+        <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 999;"></div>
+        <div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+            <iframe src="externalContent"></iframe>
+            <p1>
+                -- 點擊空白處以退出故事地圖 --
+            </p1>
+        </div>
+        <div class="lang-toggle" id="langToggle">
+                <div class="slider"></div>
+                <span data-lang="en" class="option">EN</span>
+                <span data-lang="zh" class="option">繁中</span>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="script.js"></script>
+            <script>
+                // ====================== SMOOTH ANIMATION BOTH DIRECTIONS ======================
+                const langToggle = document.getElementById("langToggle");
+                const slider = langToggle.querySelector(".slider");
+
+                const isChinesePage = window.location.href.includes("index_zh.html");
+
+                function initToggle() {
+                    const enOption = langToggle.querySelector('[data-lang="en"]');
+                    const zhOption = langToggle.querySelector('[data-lang="zh"]');
+
+                    // 1. Instantly set starting position (opposite side) — no animation yet
+                    slider.style.transition = "none";
+
+                    if (isChinesePage) {
+                        langToggle.classList.add("chinese");
+                        zhOption.classList.add("active");
+                        enOption.classList.remove("active");
+                    } else {
+                        langToggle.classList.remove("chinese");
+                        enOption.classList.add("active");
+                        zhOption.classList.remove("active");
+                    }
+
+                    // 2. Tiny delay → re-enable animation so it slides in
+                    setTimeout(() => {
+                        slider.style.transition = "left 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+                    }, 30);
+                }
+
+                // Click = switch page
+                langToggle.addEventListener("click", () => {
+                    window.location.href = isChinesePage ? "index.html" : "index_zh.html";
+                });
+
+                initToggle();
+            </script>
+</html>
