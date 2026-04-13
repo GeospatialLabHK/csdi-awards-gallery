@@ -169,10 +169,9 @@ figure:hover figcaption span {
     left: 13%;
 }
 .cards-container1 h1 {
-    font-size: 70px;
-    max-width: 80%;
-}
+    font-size: 60px;
 
+}
 .cards-container2 {
     position: relative;
     top: 13%;
