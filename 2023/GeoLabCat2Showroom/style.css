@@ -202,10 +202,20 @@ figure:hover figcaption span {
     max-width: 100%;
 }
 
+.cards-container2 h2 {
+    font-size: 35px;
+    top: 25%;
+}
+
 .cards-container3 {
     position: relative;
     top: 13%;
     left: 9%;
+}
+
+.cards-container3 h1 {
+    font-size: 70px;
+    max-width: 100%;
 }
 
 .cards-container4 {
