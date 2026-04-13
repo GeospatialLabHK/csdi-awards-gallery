@@ -229,7 +229,7 @@ figure:hover figcaption span {
     left: 13%;
 }
 .cards-container1 h1 {
-    font-size: 60px;
+    font-size: 47px;
     max-width: 80%;
 }
 
@@ -239,8 +239,7 @@ figure:hover figcaption span {
     left: 11%;
 }
 .cards-container2 h1 {
-    font-size: 59px;
-    max-width: 100%;
+    font-size: 40px;
 }
 
 .cards-container3 {
@@ -249,8 +248,7 @@ figure:hover figcaption span {
     left: 9%;
 }
 .cards-container3 h1 {
-    font-size: 55px;
-    max-width: 100%;
+    font-size: 50px;
 }
 
 .cards-container4 {
@@ -259,8 +257,8 @@ figure:hover figcaption span {
     left: 7%;
 }
 .cards-container4 h1 {
-    font-size: 65px;
-    max-width: 80%;
+    font-size: 40px;
+    max-width: 95%;
 }
 
 .cards-container {
