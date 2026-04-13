@@ -229,8 +229,7 @@ figure:hover figcaption span {
     left: 13%;
 }
 .cards-container1 h1 {
-    font-size: 60px;
-    max-width: 80%;
+    font-size: 40px;
 }
 
 .cards-container2 {
@@ -239,8 +238,8 @@ figure:hover figcaption span {
     left: 11%;
 }
 .cards-container2 h1 {
-    font-size: 59px;
-    max-width: 100%;
+    font-size: 60px;
+    max-width: 90%;
 }
 
 .cards-container3 {
